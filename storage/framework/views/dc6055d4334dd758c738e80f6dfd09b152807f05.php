@@ -37,10 +37,6 @@
                         <option id="3">Jonathan</option>
                     </select>
                   </div>
-                  <div class="col-6 ">
-                    <label for="datacompra">Data da compra</label>
-                    <input type="date" name="data" data-date-format="DD MMMM YYYY" class="form-control" placeholder="Data de compra">
-                  </div>
                 </div>
             </div>
             <div class="card-footer">

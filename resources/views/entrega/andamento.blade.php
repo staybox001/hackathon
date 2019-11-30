@@ -11,7 +11,6 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Data</th>
                   <th>Produto</th>
                   <th>Cliente</th>
                   <th>Motorista</th>
@@ -19,24 +18,14 @@
                 </tr>
                 </thead>
                 <tbody>
+                @foreach ($andamento as $andamentos)
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
+                  <td>{{$andamentos->id_produto}}</td>
+                  <td>{{$andamentos->id_cliente}}</td>
+                  <td>{{$andamentos->id_motorista}}</td>
                   <td>X</td>
                 </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
-                </tr>
+                @endforeach
               </table>
             </div>
          </div>            

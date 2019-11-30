@@ -8,10 +8,9 @@
               </div>
             <!-- /.card-header -->
             <div class="card-body">
-              <table id="example1" class="table table-bordered table-striped">
+            <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Data</th>
                   <th>Produto</th>
                   <th>Cliente</th>
                   <th>Motorista</th>
@@ -19,24 +18,14 @@
                 </tr>
                 </thead>
                 <tbody>
+                @foreach ($efetuada as $efetuadas)
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
+                  <td>{{$efetuadas->id_produto}}</td>
+                  <td>{{$efetuadas->is_cliente}}</td>
+                  <td>{{$efetuadas->id_motorista}}</td>
+                  <td><a href="{{route('entrega.show', $entregas->id_entregas )}}" class="btn btn-default">Abrir</a></td>
                 </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
-                </tr>
+                @endforeach
               </table>
             </div>
          </div>            
