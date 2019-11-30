@@ -1,9 +1,9 @@
 <?php $__env->startSection('content'); ?>
 
-      <div class="container">
-         <div class="card card-primary">
+<div class="container">
+         <div class="card card-warning">
               <div class="card-header">
-                <h3 class="card-title">Entregas em situação de andamento</h3>
+                <h3 class="card-title">Entregas em situação de divergência</h3>
               </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -40,6 +40,5 @@
             </div>
          </div>            
       </div> 
-
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('template.template', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/gabriel/hackathon/resources/views/entrega/andamento.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('template.template', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/gabriel/hackathon/resources/views/entrega/divergencia.blade.php ENDPATH**/ ?>

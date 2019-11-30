@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Geolocation extends Model
 {
     //
-    public function motoristas()
+    public function motorista()
     {
-        return $this->belongsTo('App\Motoristas');
+        return $this->belongsTo('App\Motorista');
     }
 }

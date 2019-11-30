@@ -240,10 +240,10 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo e(route('entregaproblema')); ?>" class="nav-link">
+                <a href="<?php echo e(route('entregadivergencia')); ?>" class="nav-link">
                   <i class="fas fa-exclamation-triangle"></i>
                   <p>
-                    Problema</p>
+                    Divergência</p>
                 </a>
               </li>
             </ul>
@@ -308,13 +308,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/boxed.html" class="nav-link">
+              <a href="<?php echo e(route('motorista.create')); ?>" class="nav-link">
                   <i class="fas fa-plus"></i>
                   <p>Cadastrar</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                <a href="<?php echo e(route('motorista.index')); ?>" class="nav-link">
                   <i class="far fa-eye"></i>
                   <p>Visualizar</p>
                 </a>

@@ -25,7 +25,7 @@ Route::resource('/entrega', 'EntregaController');
 
     Route::get('/efetuada', 'EntregaController@efetuada')->name('entregaefetuada');
 
-    Route::get('/problema', 'EntregaController@problema')->name('entregaproblema');
+    Route::get('/divergencia', 'EntregaController@divergencia')->name('entregadivergencia');
 
 Route::resource('/categoria', 'CategoriaController');
 
