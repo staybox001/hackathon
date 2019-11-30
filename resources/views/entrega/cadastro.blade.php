@@ -12,11 +12,10 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                     <label for="produto">Produto</label>
-<<<<<<< HEAD
-                    <select id="produto" nome="produto" class="form-control">
-=======
+
+
                     <select id="produto" name="produto" class="form-control">
->>>>>>> gabriel4
+
                         <option selected>Selecionar</option>
                         <option id="1">Caixa D'água 500l</option>
                         <option id="2">Caixa D'água 1000l</option>
@@ -27,10 +26,9 @@
                   <div class="col-6">
                     <label for="cliente">Cliente</label>
                     <select id="cliente" name="cliente" class="form-control">
-<<<<<<< HEAD
-                    <select id="cliente" nome="cliente" class="form-control">
-=======
->>>>>>> gabriel4
+
+                 
+
                         <option selected>Selecione</option>
                         <option id="1">Lenon</option>
                         <option id="2">Gabriel</option>
@@ -46,23 +44,17 @@
                         <option id="3">Jonathan</option>
                     </select>
                   </div>
-<<<<<<< HEAD
+
                   <div name="status" hidden value="0"></div>
-=======
->>>>>>> gabriel4
+
                 </div>
             </div>
             <div class="card-footer">
               <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
-<<<<<<< HEAD
+
                 </div>
             </div>
-            <div name="status" value="0" hidden></div>
-            <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Enviar</button>
-=======
->>>>>>> gabriel4
-            </div>
+            
         </form>
     </div>
 

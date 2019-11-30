@@ -15,10 +15,9 @@ class EntregaController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
+
         $entrega = Entrega::all();
-=======
->>>>>>> gabriel4
+
         return view('entrega.index', compact('entrega'));
     }
 
@@ -27,6 +26,7 @@ class EntregaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function create()
     {
         return view('entrega.cadastro');
@@ -34,35 +34,24 @@ class EntregaController extends Controller
 
     public function andamento()
     {
-<<<<<<< HEAD
-        $andamento = Entrega::where('status',0)->all();
-        return view('entrega.andamento');
-=======
+
         $andamento=Entrega::where('status', 0)->all();
         return view('entrega.andamento', compact('andamento'));
->>>>>>> gabriel4
+
     }
 
     public function efetuada()
     {
         $efetuada=Entrega::where('status', 1)->all();
         return view('entrega.efetuada', compact('efetuada'));
-<<<<<<< HEAD
-        $efetuada = Entrega::where('status',1)->all();
-        return view('entrega.efetuada');
-=======
->>>>>>> gabriel4
+
     }
     
     public function divergencia()
     {
         $divergencia=Entrega::where('status', 2)->all();
         return view('entrega.divergencia', compact('divergencia'));
-<<<<<<< HEAD
-        $divergencia = Entrega::where('status',2)->all();
-        return view('entrega.divergencia');
-=======
->>>>>>> gabriel4
+        
     }
 
     /**
@@ -73,13 +62,10 @@ class EntregaController extends Controller
      */
     public function store(Request $request)
     {
-        Entrega::insert(['id_produto' => $request->produto, 'id_cliente' => $request->cliente, 'id_motorista' => $request->motorista]);
-        return redirect()->route('/entrega/andamento');
-<<<<<<< HEAD
+       
         Entrega::insert(['id_produto' => $request->produto, 'id_cliente' => $request->cliente, 'id_motorista' => $request->motorista, 'status' => $request->status]);
         return redirect()->route('/andamento');
-=======
->>>>>>> gabriel4
+
     }
 
     /**
