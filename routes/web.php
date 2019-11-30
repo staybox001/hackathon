@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('painel.index');
 });
 
+Route::resource('/cliente', 'ClienteController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -9,6 +9,6 @@ class Cliente extends Model
     //
     public function entregas()
     {
-        return $this->hasMany('App\entregas');
+        return $this->hasMany('App\Entregas');
     }
 }
