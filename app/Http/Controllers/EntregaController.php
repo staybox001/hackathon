@@ -50,7 +50,8 @@ class EntregaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Entrega::insert(['id_produto' => $request->produto, 'id_cliente' => $request->cliente, 'id_motorista' => $request->motorista]);
+        return redirect()->route('/andamento');
     }
 
     /**
