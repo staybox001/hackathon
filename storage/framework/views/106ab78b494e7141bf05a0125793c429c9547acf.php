@@ -13,16 +13,18 @@
                   <th>Produto</th>
                   <th>Cliente</th>
                   <th>Motorista</th>
+                  <th>Aberto Dia</th>
                   <th>Detalhes</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php $__currentLoopData = $andamento; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $andamentos): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
-                  <td><?php echo e($andamentos->id_produto); ?></td>
-                  <td><?php echo e($andamentos->id_cliente); ?></td>
-                  <td><?php echo e($andamentos->id_motorista); ?></td>
-                  <td>X</td>
+                  <td><?php echo e($andamentos->produto); ?></td>
+                  <td><?php echo e($andamentos->cliente); ?></td>
+                  <td><?php echo e($andamentos->motorista); ?></td>
+                  <td><?php echo e($andamentos->abertura); ?></td>
+                <td><a class="btn btn-success" href="<?php echo e(route('entrega.show', $andamentos->id)); ?>">Abrir</a></td>
                 </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
               </table>

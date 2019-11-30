@@ -52,7 +52,6 @@ class ProdutoController extends Controller
                     ->back()
                     ->with('error', 'Falha ao enviar imagem');
             }
-      
             Produtos::insert(['nome' => $request->nome, 'id_categoria' => $request->categoria, 'valor' => $request->valor, 'peso' => $request->peso, 'imagem' => $upload]);
             
         }

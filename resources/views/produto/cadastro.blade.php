@@ -7,7 +7,7 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form role="form" method="POST" enctype="multipart/form-data" action={{route('produto.store')}}>
+            <form role="form" method="POST" enctype="multipart/form-data" action="{{route('produto.store')}}">
                 @csrf
             <div class="card-body">
               <div class="row">
