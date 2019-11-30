@@ -97,7 +97,15 @@ class EntregaController extends Controller
      */
     public function show($id)
     {
-        //
+        $entrega = Entrega::where('entregas.id', $id)
+        ->join('produtos', 'entregas.id_produto', '=', 'produtos.id')
+        ->join('motoristas', 'entregas.id_motorista', '=', 'motoristas.id')
+        ->join('clientes', 'entregas.id_cliente', '=', 'clientes.id')   
+        ->select('entregas.id_produto', 'entregas.id_cliente', 'entregas.id_motorista', 'produtos.nome as produto', 'motoristas.nome as motorista', 'entregas.status', 'entregas.latitude', 'entregas.longitude','clientes.nome as cliente_nome')
+        ->first();
+       // dd($entrega);
+        // /dd($andamento);
+        return view('entrega.entregashow', compact('entrega', 'id'));
     }
 
     /**
