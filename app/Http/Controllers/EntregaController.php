@@ -101,7 +101,7 @@ class EntregaController extends Controller
         ->join('produtos', 'entregas.id_produto', '=', 'produtos.id')
         ->join('motoristas', 'entregas.id_motorista', '=', 'motoristas.id')
         ->join('clientes', 'entregas.id_cliente', '=', 'clientes.id')   
-        ->select('entregas.id_produto', 'entregas.id_cliente', 'entregas.id_motorista', 'produtos.nome as produto', 'motoristas.nome as motorista', 'entregas.status', 'entregas.latitude', 'entregas.longitude','clientes.nome as cliente_nome')
+        ->select('entregas.id_produto', 'entregas.id_cliente', 'entregas.created_at as abertura', 'entregas.id_motorista', 'produtos.nome as produto', 'motoristas.nome as motorista', 'entregas.status', 'entregas.latitude', 'entregas.longitude','clientes.nome as cliente_nome')
         ->first();
        // dd($entrega);
         // /dd($andamento);

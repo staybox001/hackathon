@@ -25,8 +25,7 @@ class CreateEntregasTable extends Migration
             $table->datetime('data_entrega')->nullable();
             $table->string('foto_entrega', 100)->nullable();
             $table->string('foto_nota', 100)->nullable();
-
-            $table->timestamps();
+            $table->dateTime('created_at')->useCurrent();
         });
     }
 

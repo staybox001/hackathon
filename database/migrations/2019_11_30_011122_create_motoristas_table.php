@@ -20,7 +20,7 @@ class CreateMotoristasTable extends Migration
             $table->datetime('data_nascimento');
             $table->string('senha', 255);
             $table->string('foto', 255);
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 

@@ -32,7 +32,10 @@
                             <br /><br />
                             <p class="card-text">Cliente: {{$entrega->cliente_nome}}  <a class="btn-sm  btn-success" href="{{route('cliente.show', $entrega->id_cliente)}}">Abrir</a></p>
                         
-                        <h6 class="card-title">Motorista Responsável: {{$entrega->motorista}} <a class="btn-sm  btn-success" href="{{route('motorista.show', $entrega->id_motorista)}}">Abrir</a></h6>
+                            <h6 class="card-title">Motorista : {{$entrega->motorista}} <a class="btn-sm  btn-success" href="{{route('motorista.show', $entrega->id_motorista)}}">Abrir</a></h6>
+                            
+                            <h6 class="card-title">Aberto em : {{$entrega->created_at}} <a class="btn-sm  btn-success" href="{{route('motorista.show', $entrega->id_motorista)}}">Abrir</a></h6>
+
                             <br /><br />
                         </div>
                     </div>
@@ -58,13 +61,13 @@
                   <div class="card-body">
                     <div class="row">
                       <div class="col-sm-6">
-                        <a href="https://via.placeholder.com/1200/FFFFFF.png?text=1" data-toggle="lightbox" data-title="sample 1 - white" data-gallery="gallery">
-                          <img src="https://via.placeholder.com/300/FFFFFF?text=1" class="img-fluid mb-2" alt="white sample"/>
+                        <a href="{{url('storage/'.$entrega->foto_entrega)}}" data-toggle="lightbox" data-title="sample 1 - white" data-gallery="gallery">
+                          <img src="{{url('storage/'.$entrega->foto_entrega)}}" class="img-fluid mb-2" alt="white sample"/>
                         </a>
                       </div>
                       <div class="col-sm-6">
-                        <a href="https://via.placeholder.com/1200/000000.png?text=2" data-toggle="lightbox" data-title="sample 2 - black" data-gallery="gallery">
-                          <img src="https://via.placeholder.com/300/000000?text=2" class="img-fluid mb-2" alt="black sample"/>
+                        <a href="{{url('storage/'.$entrega->foto_nota)}}" data-toggle="lightbox" data-title="sample 2 - black" data-gallery="gallery">
+                          <img src="{{url('storage/'.$entrega->foto_nota)}}" class="img-fluid mb-2" alt="black sample"/>
                         </a>
                       </div>
                     </div>

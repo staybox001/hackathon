@@ -13,6 +13,7 @@
                   <th>Produto</th>
                   <th>Cliente</th>
                   <th>Motorista</th>
+                  <th>Aberto Dia</th>
                   <th>Detalhes</th>
                 </tr>
                 </thead>
@@ -22,6 +23,7 @@
                   <td><?php echo e($andamentos->produto); ?></td>
                   <td><?php echo e($andamentos->cliente); ?></td>
                   <td><?php echo e($andamentos->motorista); ?></td>
+                  <td><?php echo e($andamentos->abertura); ?></td>
                 <td><a class="btn btn-success" href="<?php echo e(route('entrega.show', $andamentos->id)); ?>">Abrir</a></td>
                 </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
