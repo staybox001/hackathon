@@ -20,7 +20,11 @@
                 <tr>
                     <td><?php echo e($categoria->nome); ?></td>
                     <td><?php echo e($categoria->descricao); ?></td>
-                    <td><a class="btn-sm btn-success" href="<?php echo e(route('categoria.show', $categoria->id)); ?>">Abrir</a></td>
+                    <td>
+                      <a class="btn-sm btn-success" href="<?php echo e(route('categoria.show', $categoria->id)); ?>">Abrir</a>
+                      <a class="btn-sm btn-danger" href="#">Remove</a>
+                    </td>
+                    
                 </tr>
                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tbody>

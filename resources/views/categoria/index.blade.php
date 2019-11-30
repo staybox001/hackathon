@@ -21,7 +21,11 @@
                 <tr>
                     <td>{{$categoria->nome}}</td>
                     <td>{{$categoria->descricao}}</td>
-                    <td><a class="btn-sm btn-success" href="{{route('categoria.show', $categoria->id)}}">Abrir</a></td>
+                    <td>
+                      <a class="btn-sm btn-success" href="{{route('categoria.show', $categoria->id)}}">Abrir</a>
+                      <a class="btn-sm btn-danger" href="#">Remove</a>
+                    </td>
+                    
                 </tr>
                @endforeach
                 </tbody>

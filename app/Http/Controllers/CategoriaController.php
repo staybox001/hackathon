@@ -36,7 +36,8 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-       
+        Categoria::insert(['nome' => $request->nome, 'descricao' => $request->descricao]);
+        return redirect()->route('categoria.index');
     }
 
     /**
