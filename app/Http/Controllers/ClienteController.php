@@ -26,7 +26,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        //
+        return view('cliente.cadastro');
     }
 
     /**
@@ -37,7 +37,9 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        Cliente::insert(['nome' => $request->nome, 'endereco' => $request->endereco, 'estado' => $request->estado, 'cidade' => $request->cidade]);
+        return redirect()->route('cliente.index');
     }
 
     /**
@@ -48,7 +50,8 @@ class ClienteController extends Controller
      */
     public function show($id)
     {
-        //
+        $cliente = Cliente::find($id);
+        return view('cliente.clienteshow', compact('cliente'));
     }
 
     /**
@@ -59,7 +62,8 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cliente = Cliente::find($id);
+        return view('cliente.edit', compact('cliente'));
     }
 
     /**
@@ -71,7 +75,9 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Cliente::where('id', $id)->
+                            update(['nome' => $request->nome, 'endereco' => $request->endereco, 'cidade' => $request->cidade, 'estado' => $request->estado]);
+        return redirect()->route('cliente.show', $id);
     }
 
     /**
