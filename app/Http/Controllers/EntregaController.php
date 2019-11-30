@@ -30,7 +30,7 @@ class EntregaController extends Controller
 
     public function andamento()
     {
-        $andamento=Entrega::where('status', 0)->all();
+        $andamento = Entrega::where('status', 0)->all();
         return view('entrega.andamento', compact('andamento'));
     }
 

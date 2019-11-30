@@ -38,6 +38,7 @@
                         <option id="3">Jonathan</option>
                     </select>
                   </div>
+                  <div name="status" hidden value="0"></div>
                 </div>
             </div>
             <div class="card-footer">
