@@ -2,32 +2,37 @@
 <div class="container">
     <div class="card card-primary">
             <div class="card-header">
-            <h3 class="card-title">Cadastrar Motorista</h3>
+            <h3 class="card-title">Cadastrar Produtos</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form role="form" method="POST" enctype="multipart/form-data" action=<?php echo e(route('motorista.store')); ?>>
+            <form role="form" method="POST" enctype="multipart/form-data" action=<?php echo e(route('produto.store')); ?>>
                 <?php echo csrf_field(); ?>
             <div class="card-body">
               <div class="row">
                   <div class="col-sm-6">
                         <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input name="nome" type="text" class="form-control" id="nome" placeholder="Nome do Motorista">
+                        <input name="nome" type="text" class="form-control" id="nome" placeholder="Nome do Produto">
                         </div>
                         <div class="form-group">
-                        <label for="cpf">CPF</label>
-                        <input name="cpf" type="text" class="form-control" id="cpf" placeholder="CPF do Motorista">
+                            <label for="data">Categoria</label>
+                            <select id="categoria" name="categoria"class="form-control">
+                                    <option selected>Selecione</option>
+                                    <option id="1">Lenon</option>
+                                    <option id="2">Gabriel</option>
+                                    <option id="3">Jonathan</option>
+                            </select>
                         </div>
                   </div>
                   <div class="col-sm-6">
                         <div class="form-group">
-                        <label for="data">Data Nascimento</label>
-                        <input name="data" type="date" class="form-control" id="data" placeholder="Data de Nascimento">
+                        <label for="valor">Valor</label>
+                        <input name="valor" type="number" step="any" class="form-control" id="valor" placeholder="Valor">
                         </div>
                         <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input name="senha" type="password" class="form-control" id="senha" placeholder="Senha">
+                        <label for="peso">Peso</label>
+                        <input name="peso" type="number" step="any" class="form-control" id="peso" placeholder="Peso">
                         </div>
                   </div>
                   <div class="form-group">
@@ -46,4 +51,4 @@
         </div>
     </div>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('template.template', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/gabriel/hackathon/resources/views/motorista/cadastro.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('template.template', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/gabriel/hackathon/resources/views/produto/cadastro.blade.php ENDPATH**/ ?>
