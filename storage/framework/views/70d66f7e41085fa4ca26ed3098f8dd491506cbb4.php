@@ -272,7 +272,38 @@
               </li>
             
             </ul>
+
           </li>
+
+
+
+          <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+              <i class="fas fa-pallet"></i>
+                <p>
+                  Categorias
+                  <i class="fas fa-angle-left right"></i>
+                  <span class="badge badge-info right">3</span>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+              <li class="nav-item">
+                  <a href="<?php echo e(route('categoria.create')); ?>" class="nav-link">
+                    <i class="fas fa-plus"></i>
+                    <p>Cadastrar</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?php echo e(route('categoria.index')); ?>" class="nav-link">
+                    <i class="fas fa-box-open"></i>
+                    <p>Listar</p>
+                  </a>
+                </li>
+              
+              </ul>
+
+            </li>
+
           <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
             <i class="fas fa-users"></i>
@@ -308,13 +339,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/boxed.html" class="nav-link">
+              <a href="<?php echo e(route('motorista.create')); ?>" class="nav-link">
                   <i class="fas fa-plus"></i>
                   <p>Cadastrar</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                <a href="<?php echo e(route('motorista.index')); ?>" class="nav-link">
                   <i class="far fa-eye"></i>
                   <p>Visualizar</p>
                 </a>

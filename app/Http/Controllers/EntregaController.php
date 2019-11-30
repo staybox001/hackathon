@@ -35,21 +35,21 @@ class EntregaController extends Controller
     public function andamento()
     {
 
-        $andamento=Entrega::where('status', 0)->all();
+        $andamento = Entrega::where('status', 0)->get();
         return view('entrega.andamento', compact('andamento'));
 
     }
 
     public function efetuada()
     {
-        $efetuada=Entrega::where('status', 1)->all();
+        $efetuada = Entrega::where('status', 1)->get();
         return view('entrega.efetuada', compact('efetuada'));
 
     }
     
     public function divergencia()
     {
-        $divergencia=Entrega::where('status', 2)->all();
+        $divergencia = Entrega::where('status', 2)->get();
         return view('entrega.divergencia', compact('divergencia'));
         
     }
