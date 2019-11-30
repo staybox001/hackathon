@@ -1,10 +1,10 @@
 @extends('template.template')
 @section('content')
 
-      <div class="container">
-         <div class="card card-primary">
+<div class="container">
+         <div class="card card-warning">
               <div class="card-header">
-                <h3 class="card-title">Entregas em situação de andamento</h3>
+                <h3 class="card-title">Entregas em situação de divergência</h3>
               </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -41,5 +41,4 @@
             </div>
          </div>            
       </div> 
-
 @endsection

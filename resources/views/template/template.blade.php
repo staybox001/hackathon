@@ -240,10 +240,10 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('entregaproblema')}}" class="nav-link">
+                <a href="{{route('entregadivergencia')}}" class="nav-link">
                   <i class="fas fa-exclamation-triangle"></i>
                   <p>
-                    Problema</p>
+                    Divergência</p>
                 </a>
               </li>
             </ul>

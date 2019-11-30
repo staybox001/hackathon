@@ -1,10 +1,9 @@
-@extends('template.template')
-@section('content')
+<?php $__env->startSection('content'); ?>
 
-      <div class="container">
-         <div class="card card-primary">
+<div class="container">
+         <div class="card card-success">
               <div class="card-header">
-                <h3 class="card-title">Entregas em situação de andamento</h3>
+                <h3 class="card-title">Entregas em situação de efetuadas</h3>
               </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -41,5 +40,5 @@
             </div>
          </div>            
       </div> 
-
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('template.template', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/lenon/Downloads/hackathon/resources/views/entrega/efetuada.blade.php ENDPATH**/ ?>

@@ -29,7 +29,6 @@ class EntregaController extends Controller
 
     public function andamento()
     {
-
         return view('entrega.andamento');
     }
 
@@ -38,9 +37,9 @@ class EntregaController extends Controller
         return view('entrega.efetuada');
     }
 
-    public function problema()
+    public function divergencia()
     {
-        return view('entrega.problema');
+        return view('entrega.divergencia');
     }
 
     /**
@@ -51,7 +50,7 @@ class EntregaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //
     }
 
     /**
