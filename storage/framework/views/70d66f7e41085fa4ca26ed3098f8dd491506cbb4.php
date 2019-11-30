@@ -225,20 +225,20 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo e(route('entrega.andamento')); ?>" class="nav-link">
+                <a href="<?php echo e(route('entregaandamento')); ?>" class="nav-link">
                   <i class="fas fa-hourglass"></i>
                   <p> Andamento</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo e(route('entrega.efetuada')); ?>" class="nav-link">
+                <a href="<?php echo e(route('entregaefetuada')); ?>" class="nav-link">
                   <i class="fas fa-check"></i>
                   <p>
                     Efetuadas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo e(route('entrega.problema')); ?>" class="nav-link">
+                <a href="<?php echo e(route('entregaproblema')); ?>" class="nav-link">
                   <i class="fas fa-exclamation-triangle"></i>
                   <p>
                     Problema</p>
