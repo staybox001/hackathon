@@ -1,22 +1,5 @@
 @extends('template.template')
 @section('content')
-<<<<<<< HEAD
-
-
-<div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-        <div class="card card-primary">
-                <div class="card-header">
-                   <div class="row">    
-                        <div class="col-sm-9">
-                            <h5 class="card-title m-0">Motorista</h5>
-                        </div>
-                        <div class="col-sm-3">
-                            <a class="btn-sm btn-warning" href="{{route('motorista.edit', $motorista->id)}}">Editar</a>
-                        </div>
-                    </div>
-=======
 <style>
         /* Set the size of the div element that contains the map */
     #map {
@@ -67,7 +50,6 @@
                         
                     <h5 class="card-title m-0">Entregas Pendentes</h5>
   
->>>>>>> gabriel4
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
@@ -75,17 +57,9 @@
                 <div class="card-body">
                     <div class="row">
 
-<<<<<<< HEAD
-                        <div class="col-sm-4">
-                            
-                        </div>
-
-                        <div class="col-sm-8">
-=======
                     
 
                         <div class="col-sm">
->>>>>>> gabriel4
                             <h6 class="card-title">Nome: {{$motorista->nome}}</h6>
                             <br /><br />
                             <p class="card-text">CPF: {{$motorista->cpf}}</p>
@@ -105,9 +79,6 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-</div>
-=======
     <div class="row">
             <div class="col-12">
                     <div class="card">
@@ -148,5 +119,4 @@
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7D8SuZ2J4aEKYH8TDn1Ca8e0hjOdNo3s&callback=initMap">
     </script>
->>>>>>> gabriel4
 @endsection
