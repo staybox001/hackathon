@@ -17,10 +17,10 @@
                             <div class="card-body box-profile">
                               <div class="text-center">
                                 <img class="profile-user-img img-fluid img-circle"
-                                     src="../../dist/img/user4-128x128.jpg"
+                                     src="{{ url('storage/'.$motorista->foto) }}"
                                      alt="User profile picture">
                               </div>
-              
+                                
                               <h3 class="profile-username text-center">{{$motorista->nome}}</h3>
               
                               <p class="text-muted text-center">{{$motorista->cpf}}</p>
@@ -96,6 +96,7 @@
         
     </div>
 </div>
+@if (isset($coord->latitude) && isset($coord->longitude))
 <script>
         // Initialize and add the map
         function initMap() {
@@ -119,4 +120,5 @@
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7D8SuZ2J4aEKYH8TDn1Ca8e0hjOdNo3s&callback=initMap">
     </script>
+@endif
 @endsection

@@ -16,10 +16,10 @@
                             <div class="card-body box-profile">
                               <div class="text-center">
                                 <img class="profile-user-img img-fluid img-circle"
-                                     src="../../dist/img/user4-128x128.jpg"
+                                     src="<?php echo e(url('storage/'.$motorista->foto)); ?>"
                                      alt="User profile picture">
                               </div>
-              
+                                
                               <h3 class="profile-username text-center"><?php echo e($motorista->nome); ?></h3>
               
                               <p class="text-muted text-center"><?php echo e($motorista->cpf); ?></p>
@@ -95,6 +95,7 @@
         
     </div>
 </div>
+<?php if(isset($coord->latitude) && isset($coord->longitude)): ?>
 <script>
         // Initialize and add the map
         function initMap() {
@@ -119,5 +120,6 @@
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7D8SuZ2J4aEKYH8TDn1Ca8e0hjOdNo3s&callback=initMap">
     </script>
+<?php endif; ?>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('template.template', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/gabriel/hackathon/resources/views/motorista/motoristashow.blade.php ENDPATH**/ ?>
