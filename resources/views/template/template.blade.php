@@ -227,7 +227,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('entregaandamento')}}" class="nav-link">
+                <a href="{{ route('entregaandamento') }}" class="nav-link">
                   <i class="fas fa-hourglass"></i>
                   <p> Andamento</p>
                 </a>

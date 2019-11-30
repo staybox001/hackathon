@@ -1,6 +1,6 @@
 @extends('template.template')
 @section('content')
 
-    <h2>HEY</h>   
+    <h2>andamento</h2>   
 
 @endsection

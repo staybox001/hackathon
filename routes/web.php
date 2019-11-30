@@ -17,19 +17,19 @@ Route::get('/', function () {
 
 Route::resource('/cliente', 'ClienteController');
 
-Route::resource('/motorista', 'ClienteController');
+Route::resource('/motorista', 'MotoristaController');
 
 Route::resource('/entrega', 'EntregaController');
 
-    Route::get('/entrega/andamento', 'EntregaController@andamento')->name('entregaandamento');
+    Route::get('/andamento', 'EntregaController@andamento')->name('entregaandamento');
 
-    Route::get('/entrega/efetuada', 'EntregaController@efetuada')->name('entregaefetuada');
+    Route::get('/efetuada', 'EntregaController@efetuada')->name('entregaefetuada');
 
-    Route::get('/entrega/problema', 'EntregaController@problema')->name('entregaproblema');
+    Route::get('/problema', 'EntregaController@problema')->name('entregaproblema');
 
-Route::resource('/categoria', 'ClienteController');
+Route::resource('/categoria', 'CategoriaController');
 
-Route::resource('/produto', 'ClienteController');
+Route::resource('/produto', 'ProdutoController');
 
 Auth::routes();
 

@@ -29,6 +29,7 @@ class EntregaController extends Controller
 
     public function andamento()
     {
+
         return view('entrega.andamento');
     }
 
