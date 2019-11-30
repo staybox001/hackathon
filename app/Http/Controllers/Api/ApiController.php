@@ -3,14 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Entrega;
-<<<<<<< HEAD
 use App\Geolocation;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Carbon\Traits\Timestamp;
-=======
-use App\Http\Controllers\Controller;
->>>>>>> gabriel4
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -29,7 +25,6 @@ class ApiController extends Controller
         }
     }
     // recebe id do motorista
-<<<<<<< HEAD
     public function listaEntregas($id_motorista)
     {
         $entregas = DB::table('entregas')
@@ -74,19 +69,4 @@ class ApiController extends Controller
         // 0 "em andamento"
         // 1 "Concluido"
         // 2 "Advergencia"
-=======
-    public function listaEntregas($id_motorista){
-        $entregas = DB::table('entregas')
-        ->where('id_motorista', '=', "$id_motorista")
-        ->join('clientes', 'entregas.id_cliente', '=', 'clientes.id')
-        ->join('produtos', 'entregas.id_produto', '=', 'produtos.id')
-        ->select('entregas.*', 'clientes.nome', 'clientes.endereco', 'clientes.cidade', 'clientes.estado', 'produtos.nome AS prodNome')
-        ->get();
-        return json_encode($entregas);
-    }
-
-    public function postGeolocation(Request $request){
-
-    }
->>>>>>> gabriel4
 }
