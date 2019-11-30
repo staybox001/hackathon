@@ -21,6 +21,12 @@ Route::resource('/motorista', 'ClienteController');
 
 Route::resource('/entrega', 'ClienteController');
 
+    Route::get('/entrega/andamento', 'ClienteController@andamento')->name('entregaandamento');
+
+    Route::get('/entrega/efetuada', 'ClienteController@efetuada')->name('entregaefetuada');
+
+    Route::get('/entrega/problema', 'ClienteController@problema')->name('entregaproblema');
+
 Route::resource('/categoria', 'ClienteController');
 
 Route::resource('/produto', 'ClienteController');

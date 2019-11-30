@@ -225,20 +225,20 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('entrega.andamento')}}" class="nav-link">
+                <a href="{{route('entregaandamento')}}" class="nav-link">
                   <i class="fas fa-hourglass"></i>
                   <p> Andamento</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('entrega.efetuada')}}" class="nav-link">
+                <a href="{{route('entregaefetuada')}}" class="nav-link">
                   <i class="fas fa-check"></i>
                   <p>
                     Efetuadas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('entrega.problema')}}" class="nav-link">
+                <a href="{{route('entregaproblema')}}" class="nav-link">
                   <i class="fas fa-exclamation-triangle"></i>
                   <p>
                     Problema</p>
