@@ -17,5 +17,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/entregas', 'Api\ApiController@listaEntregas');
+Route::get('/entregas/{id_motorista}', 'Api\ApiController@listaEntregas');
 Route::post('/login', 'Api\ApiController@login');
