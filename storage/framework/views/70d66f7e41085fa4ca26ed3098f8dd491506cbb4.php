@@ -38,7 +38,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Home</a>
+        <a href="index3.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contato</a>
@@ -58,14 +58,14 @@
     </form> -->
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
+    <!-- <ul class="navbar-nav ml-auto"> -->
       <!-- Messages Dropdown Menu -->
       <!-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
           <span class="badge badge-danger navbar-badge">3</span>
-        </a> -->
-        <!-- <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <a href="#" class="dropdown-item"> -->
             <!-- Message Start -->
             <!-- <div class="media">
@@ -94,11 +94,11 @@
                 <p class="text-sm">I got your message bro</p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
-            </div>
-            Message End -->
-          </a>
+            </div> -->
+            <!-- Message End -->
+          <!-- </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#" class="dropdown-item"> -->
             <!-- Message Start -->
             <!-- <div class="media">
               <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -143,13 +143,13 @@
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
-      </li> -->
-      <!-- <li class="nav-item">
+      </li>
+      <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
           <i class="fas fa-th-large"></i>
         </a>
-      </li> -->
-    </ul>
+      </li>
+    </ul> -->
   </nav>
   <!-- /.navbar -->
 
@@ -219,26 +219,26 @@
             </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="pages/layout/boxed.html" class="nav-link">
+                <a href="<?php echo e(route('entrega.create')); ?>" class="nav-link">
                 <i class="fas fa-plus"></i>
                   <p>Cadastrar</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+                <a href="<?php echo e(route('entrega.andamento')); ?>" class="nav-link">
                   <i class="fas fa-hourglass"></i>
                   <p> Andamento</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/boxed.html" class="nav-link">
+                <a href="<?php echo e(route('entrega.efetuada')); ?>" class="nav-link">
                   <i class="fas fa-check"></i>
                   <p>
                     Efetuadas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                <a href="<?php echo e(route('entrega.problema')); ?>" class="nav-link">
                   <i class="fas fa-exclamation-triangle"></i>
                   <p>
                     Problema</p>
@@ -257,27 +257,22 @@
             </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="pages/layout/boxed.html" class="nav-link">
+                <a href="<?php echo e(route('produto.create')); ?>" class="nav-link">
                   <i class="fas fa-plus"></i>
                   <p>Cadastrar</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                <a href="<?php echo e(route('produto.index')); ?>" class="nav-link">
                   <i class="fas fa-box-open"></i>
                   <p>Estoque</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="fas fa-list"></i>
-                  <p>Todos</p>
-                </a>
-              </li>
+            
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+          <a href="#" class="nav-link">
             <i class="fas fa-users"></i>
               <p>
                 Clientes
@@ -287,13 +282,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/boxed.html" class="nav-link">
+                <a href="<?php echo e(route('cliente.create')); ?>" class="nav-link">
                   <i class="fas fa-plus"></i>
                   <p>Cadastrar</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                <a href="<?php echo e(route('cliente.index')); ?>" class="nav-link">
                   <i class="far fa-eye"></i>
                   <p>Visualizar</p>
                 </a>
@@ -773,14 +768,8 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dash</h1>
           </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dash</li>
-            </ol>
-          </div><!-- /.col -->
+
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
