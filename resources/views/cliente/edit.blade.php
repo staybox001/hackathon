@@ -9,6 +9,7 @@
             <!-- form start -->
             <form role="form" method="post" action={{ route('cliente.update', $cliente->id) }}>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {!! method_field('PUT') !!}}
 =======
 <<<<<<< HEAD
@@ -16,6 +17,9 @@
 =======
                 {!! method_field('PUT') !!}}
 >>>>>>> 5992403b9d11ffc084b2c02fc4c3938259ad67ce
+>>>>>>> gabriel4
+=======
+                {!! method_field('PUT') !!}}
 >>>>>>> gabriel4
                 @csrf
             <div class="card-body">
