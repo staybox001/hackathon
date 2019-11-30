@@ -80,7 +80,10 @@ class ProdutoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $selected = '';
+        $produto = Produtos::find($id);
+        $categorias = Categoria::all();
+        return view('produto.edit', compact('produto', 'categorias', 'selected'));
     }
 
     /**
@@ -92,7 +95,29 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       
+        $olddata = Produtos::find($id);
+        $foto = $olddata->imagem;
+        if ($request->hasFile('img_produto') && $request->file('img_produto')->isValid()) {
+            $nome = $request->nome . time();
+            $extensao = $request->img_produto->extension();
+            $nomeFile = "{$nome}.{$extensao}";
+            $upload = $request->img_produto->storeAs('img-produto', $nomeFile);
+            $dadosFormulario['img_produto'] = $upload;
+            if (!$upload) {
+                return redirect()
+                    ->back()
+                    ->with('error', 'Falha ao enviar imagem');
+            }
+            $foto = $upload;
+        }
+
+        Produtos::where('id', $id)
+                            ->update(['nome' => $request->nome, 'id_categoria' => $request->categoria, 'valor' => $request->valor, 'peso' => $request->peso, 'imagem' => $foto]);
+        return redirect()->route('produto.show', $id);
+
+
+
     }
 
     /**
