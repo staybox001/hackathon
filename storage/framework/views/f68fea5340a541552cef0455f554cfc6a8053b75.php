@@ -14,6 +14,7 @@
         <td><?php echo e($cliente->endereco); ?></td>
         <td><?php echo e($cliente->cidade); ?></td>
         <td><?php echo e($cliente->estado); ?></td>
+        <td><a href="<?php echo e(route('cliente.show', $cliente->id)); ?>" class="btn btn-default">Abrir</a></td>
 
     </tbody>
 

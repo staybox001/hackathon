@@ -15,6 +15,7 @@
         <td>{{$cliente->endereco}}</td>
         <td>{{$cliente->cidade}}</td>
         <td>{{$cliente->estado}}</td>
+        <td><a href="{{route('cliente.show', $cliente->id)}}" class="btn btn-default">Abrir</a></td>
 
     </tbody>
 
