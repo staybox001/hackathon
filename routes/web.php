@@ -13,19 +13,19 @@
 
 Route::get('/', function () {
     return view('painel.index');
-});
+})->name('inicio');
 
 Route::resource('/cliente', 'ClienteController');
 
 Route::resource('/motorista', 'ClienteController');
 
-Route::resource('/entrega', 'ClienteController');
+Route::resource('/entrega', 'EntregaController');
 
-    Route::get('/entrega/andamento', 'ClienteController@andamento')->name('entregaandamento');
+    Route::get('/entrega/andamento', 'EntregaController@andamento')->name('entregaandamento');
 
-    Route::get('/entrega/efetuada', 'ClienteController@efetuada')->name('entregaefetuada');
+    Route::get('/entrega/efetuada', 'EntregaController@efetuada')->name('entregaefetuada');
 
-    Route::get('/entrega/problema', 'ClienteController@problema')->name('entregaproblema');
+    Route::get('/entrega/problema', 'EntregaController@problema')->name('entregaproblema');
 
 Route::resource('/categoria', 'ClienteController');
 

@@ -24,7 +24,7 @@ class EntregaController extends Controller
      */
     public function create()
     {
-        return view('entrega.cadastro', compact('entrega'));
+        return view('entrega.cadastro');
     }
 
     public function andamento()
@@ -32,7 +32,7 @@ class EntregaController extends Controller
         return view('entrega.andamento');
     }
 
-    public function efetuadas()
+    public function efetuada()
     {
         return view('entrega.efetuada');
     }

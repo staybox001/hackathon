@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="<?php echo e(url('plugins/fontawesome-free/css/all.min.css')); ?>">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?php echo e(url('plugins/datatables-bs4/css/dataTables.bootstrap4.css')); ?>">
   <!-- Tempusdominus Bbootstrap 4 -->
   <link rel="stylesheet" href="<?php echo e(url('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')); ?>">
   <!-- iCheck -->
@@ -180,7 +182,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="" class="nav-link active">
+            <a href="<?php echo e(route('inicio')); ?>" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Início
@@ -827,6 +829,10 @@
 <script src="<?php echo e(url('dist/js/pages/dashboard.js')); ?>"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo e(url('dist/js/demo.js')); ?>"></script>
+<!-- DataTables -->
+<script src="<?php echo e(url('plugins/datatables/jquery.dataTables.js')); ?>"></script>
+<script src="<?php echo e(url('plugins/datatables-bs4/js/dataTables.bootstrap4.js')); ?>"></script>
+
 </body>
 </html>
 <?php /**PATH /home/lenon/Downloads/hackathon/resources/views/template/template.blade.php ENDPATH**/ ?>
