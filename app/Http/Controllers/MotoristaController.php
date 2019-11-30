@@ -4,11 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Motorista;
-<<<<<<< HEAD
-=======
 use App\Geolocation;
 use DB;
->>>>>>> gabriel4
 
 class MotoristaController extends Controller
 {
@@ -53,15 +50,11 @@ class MotoristaController extends Controller
     public function show($id)
     {
         $motorista = Motorista::find($id);
-<<<<<<< HEAD
-        return view('motorista.motoristashow', compact('motorista'));
-=======
         $coord = Geolocation::where('id_motorista', $id)
                                 ->orderBy('id', 'desc')
                                 ->first();
         //dd($coord);
         return view('motorista.motoristashow', compact('motorista', 'coord'));
->>>>>>> gabriel4
     }
 
     /**
