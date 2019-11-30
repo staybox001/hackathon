@@ -240,10 +240,10 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo e(route('entregaproblema')); ?>" class="nav-link">
+                <a href="<?php echo e(route('entregadivergencia')); ?>" class="nav-link">
                   <i class="fas fa-exclamation-triangle"></i>
                   <p>
-                    Problema</p>
+                    Divergência</p>
                 </a>
               </li>
             </ul>
