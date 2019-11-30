@@ -17,6 +17,14 @@ Route::get('/', function () {
 
 Route::resource('/cliente', 'ClienteController');
 
+Route::resource('/motorista', 'ClienteController');
+
+Route::resource('/entrega', 'ClienteController');
+
+Route::resource('/categoria', 'ClienteController');
+
+Route::resource('/produto', 'ClienteController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
