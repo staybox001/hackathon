@@ -19,12 +19,10 @@
                 </thead>
                 <tbody>
                 @foreach ($andamento as $andamentos)
-                <tr>
-                  <td>{{$andamentos->id_produto}}</td>
-                  <td>{{$andamentos->id_cliente}}</td>
-                  <td>{{$andamentos->id_motorista}}</td>
-                  <td>X</td>
-                </tr>
+                <td>{{$andamentos->id_produto}}</td>
+                <td>{{$andamentos->id_cliente}}</td>
+                <td>{{$andamentos->id_motorista}}</td>
+                <td>X</td>
                 @endforeach
               </table>
             </div>

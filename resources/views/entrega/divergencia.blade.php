@@ -19,12 +19,10 @@
                 </thead>
                 <tbody>
                 @foreach ($divergencia as $divergencias)
-                <tr>
-                  <td>{{$divergencias->id_produto}}</td>
-                  <td>{{$divergencias->id_cliente}}</td>
-                  <td>{{$divergencias->id_motorista}}</td>
-                  <td>X</td>
-                </tr>
+                <td>{{$divergencias->id_produto}}</td>
+                <td>{{$divergencias->id_cliente}}</td>
+                <td>{{$divergencias->id_motorista}}</td>
+                <td>X</td>
                 @endforeach
               </table>
             </div>

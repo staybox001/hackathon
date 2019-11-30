@@ -15,6 +15,7 @@ class EntregaController extends Controller
      */
     public function index()
     {
+        $entrega = Entrega::all();
         return view('entrega.index', compact('entrega'));
     }
 
@@ -30,20 +31,24 @@ class EntregaController extends Controller
 
     public function andamento()
     {
-        $andamento = Entrega::where('status', 0)->all();
-        return view('entrega.andamento', compact('andamento'));
+        $andamento = Entrega::where('status',0)->all();
+        return view('entrega.andamento');
     }
 
     public function efetuada()
     {
         $efetuada=Entrega::where('status', 1)->all();
         return view('entrega.efetuada', compact('efetuada'));
+        $efetuada = Entrega::where('status',1)->all();
+        return view('entrega.efetuada');
     }
     
     public function divergencia()
     {
         $divergencia=Entrega::where('status', 2)->all();
         return view('entrega.divergencia', compact('divergencia'));
+        $divergencia = Entrega::where('status',2)->all();
+        return view('entrega.divergencia');
     }
 
     /**
@@ -56,6 +61,8 @@ class EntregaController extends Controller
     {
         Entrega::insert(['id_produto' => $request->produto, 'id_cliente' => $request->cliente, 'id_motorista' => $request->motorista]);
         return redirect()->route('/entrega/andamento');
+        Entrega::insert(['id_produto' => $request->produto, 'id_cliente' => $request->cliente, 'id_motorista' => $request->motorista, 'status' => $request->status]);
+        return redirect()->route('/andamento');
     }
 
     /**
