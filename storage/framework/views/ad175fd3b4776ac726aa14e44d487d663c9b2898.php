@@ -7,10 +7,9 @@
               </div>
             <!-- /.card-header -->
             <div class="card-body">
-              <table id="example1" class="table table-bordered table-striped">
+            <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Data</th>
                   <th>Produto</th>
                   <th>Cliente</th>
                   <th>Motorista</th>
@@ -18,24 +17,14 @@
                 </tr>
                 </thead>
                 <tbody>
+                <?php $__currentLoopData = $divergencia; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $divergencias): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
+                  <td><?php echo e($divergencias->id_produto); ?></td>
+                  <td><?php echo e($divergencias->id_cliente); ?></td>
+                  <td><?php echo e($divergencias->id_motorista); ?></td>
                   <td>X</td>
                 </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
-                </tr>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
               </table>
             </div>
          </div>            
