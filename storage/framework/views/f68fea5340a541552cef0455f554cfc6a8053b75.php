@@ -1,25 +1,52 @@
 <?php $__env->startSection('content'); ?>
 
-<?php $__currentLoopData = $clientes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cliente): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-<table id="clientetable" class="table table-bordered table-hover">
-    <thead>
-        <th>Nome</th>
-        <th>Endereço</th>
-        <th>Cidade</th>
-        <th>Estado</th>
-        <th>Ação</th>
-    </thead>
-    <tbody>
-        <td><?php echo e($cliente->nome); ?></td>
-        <td><?php echo e($cliente->endereco); ?></td>
-        <td><?php echo e($cliente->cidade); ?></td>
-        <td><?php echo e($cliente->estado); ?></td>
-        <td><a href="<?php echo e(route('cliente.show', $cliente->id)); ?>" class="btn btn-default">Abrir</a></td>
 
-    </tbody>
 
+
+<div class="container">
+    <div class="card card-primary">
+                <div class="card-header">
+                <h3 class="card-title">Clientes</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+               
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="clientetable" class="table table-bordered table-hover">
+                                <thead>
+                                    <th>Nome</th>
+                                    <th>Endereço</th>
+                                    <th>Cidade</th>
+                                    <th>Estado</th>
+                                    <th>Ação</th>
+                                </thead>
+                                <tbody>
+                                    <?php $__currentLoopData = $clientes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cliente): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <tr>
+                                        <td><?php echo e($cliente->nome); ?></td>
+                                        <td><?php echo e($cliente->endereco); ?></td>
+                                        <td><?php echo e($cliente->cidade); ?></td>
+                                        <td><?php echo e($cliente->estado); ?></td>
+                                        <td><a href="<?php echo e(route('cliente.show', $cliente->id)); ?>" class="btn btn-default">Abrir</a></td>
+                                    </tr>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                </tbody>
+                            
+                                
+                            </table>
+                        </div>
+                      
+                            
+                </div>
+                <!-- /.card-body -->
     
-</table>
+                <div class="card-footer">
+                   
+                </div>
+                </form>
+    </div>
+</div>
 
 <script>
     $(function () {
@@ -52,7 +79,7 @@
         </script>
 
     
-<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
 
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('template.template', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/gabriel/hackathon/resources/views/cliente/index.blade.php ENDPATH**/ ?>

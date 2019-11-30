@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Entrega;
+
 class EntregaController extends Controller
 {
     /**
@@ -13,7 +15,6 @@ class EntregaController extends Controller
      */
     public function index()
     {
-        $entregas = Entrega::all();
         return view('entrega.index', compact('entrega'));
     }
 
@@ -29,17 +30,20 @@ class EntregaController extends Controller
 
     public function andamento()
     {
-        return view('entrega.andamento');
+        $andamento=Entrega::where('status', 0)->all();
+        return view('entrega.andamento', compact('andamento'));
     }
 
     public function efetuada()
     {
-        return view('entrega.efetuada');
+        $efetuada=Entrega::where('status', 1)->all();
+        return view('entrega.efetuada', compact('efetuada'));
     }
-
+    
     public function divergencia()
     {
-        return view('entrega.divergencia');
+        $divergencia=Entrega::where('status', 2)->all();
+        return view('entrega.divergencia', compact('divergencia'));
     }
 
     /**
@@ -50,7 +54,8 @@ class EntregaController extends Controller
      */
     public function store(Request $request)
     {
-       //
+        Entrega::insert(['id_produto' => $request->produto, 'id_cliente' => $request->cliente, 'id_motorista' => $request->motorista]);
+        return redirect()->route('/entrega/andamento');
     }
 
     /**

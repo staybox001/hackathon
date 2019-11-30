@@ -1,26 +1,53 @@
 @extends('template.template')
 @section('content')
 
-@foreach ($clientes as $cliente)
-<table id="clientetable" class="table table-bordered table-hover">
-    <thead>
-        <th>Nome</th>
-        <th>Endereço</th>
-        <th>Cidade</th>
-        <th>Estado</th>
-        <th>Ação</th>
-    </thead>
-    <tbody>
-        <td>{{$cliente->nome}}</td>
-        <td>{{$cliente->endereco}}</td>
-        <td>{{$cliente->cidade}}</td>
-        <td>{{$cliente->estado}}</td>
-        <td><a href="{{route('cliente.show', $cliente->id)}}" class="btn btn-default">Abrir</a></td>
 
-    </tbody>
 
+
+<div class="container">
+    <div class="card card-primary">
+                <div class="card-header">
+                <h3 class="card-title">Clientes</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+               
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="clientetable" class="table table-bordered table-hover">
+                                <thead>
+                                    <th>Nome</th>
+                                    <th>Endereço</th>
+                                    <th>Cidade</th>
+                                    <th>Estado</th>
+                                    <th>Ação</th>
+                                </thead>
+                                <tbody>
+                                    @foreach ($clientes as $cliente)
+                                    <tr>
+                                        <td>{{$cliente->nome}}</td>
+                                        <td>{{$cliente->endereco}}</td>
+                                        <td>{{$cliente->cidade}}</td>
+                                        <td>{{$cliente->estado}}</td>
+                                        <td><a href="{{route('cliente.show', $cliente->id)}}" class="btn btn-default">Abrir</a></td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            
+                                
+                            </table>
+                        </div>
+                      
+                            
+                </div>
+                <!-- /.card-body -->
     
-</table>
+                <div class="card-footer">
+                   
+                </div>
+                </form>
+    </div>
+</div>
 
 <script>
     $(function () {
@@ -53,6 +80,6 @@
         </script>
 
     
-@endforeach
+
 
 @endsection
