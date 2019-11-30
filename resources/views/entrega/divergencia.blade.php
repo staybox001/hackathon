@@ -1,14 +1,14 @@
 @extends('template.template')
 @section('content')
 
-<div class="container">
+      <div class="container">
          <div class="card card-warning">
               <div class="card-header">
-                <h3 class="card-title">Entregas em situação de divergência</h3>
+                <h3 class="card-title">Entregas em situação de Divergência</h3>
               </div>
             <!-- /.card-header -->
             <div class="card-body">
-            <table id="example1" class="table table-bordered table-striped">
+              <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Produto</th>
@@ -18,23 +18,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach ($divergencia as $divergencias)
-<<<<<<< HEAD
-                <td>{{$divergencias->id_produto}}</td>
-                <td>{{$divergencias->id_cliente}}</td>
-                <td>{{$divergencias->id_motorista}}</td>
-                <td>X</td>
-=======
+                @foreach ($divergencias as $divergencia)
                 <tr>
-                  <td>{{$divergencias->id_produto}}</td>
-                  <td>{{$divergencias->id_cliente}}</td>
-                  <td>{{$divergencias->id_motorista}}</td>
-                  <td>X</td>
+                  <td>{{$divergencia->produto}}</td>
+                  <td>{{$divergencia->cliente}}</td>
+                  <td>{{$divergencia->motorista}}</td>
+                <td><a class="btn btn-success" href="{{route('entrega.show', $divergencia->id)}}">Abrir</a></td>
                 </tr>
->>>>>>> gabriel4
                 @endforeach
               </table>
             </div>
          </div>            
       </div> 
+
 @endsection

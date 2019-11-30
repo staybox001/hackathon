@@ -16,10 +16,9 @@
                     <select id="produto" name="produto" class="form-control">
 
                         <option selected>Selecionar</option>
-                        <option id="1">Caixa D'água 500l</option>
-                        <option id="2">Caixa D'água 1000l</option>
-                        <option id="3">Piscina 30000l</option>
-                        <option id="4">Piscina 50000l</option>
+                        <?php $__currentLoopData = $produtos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $produto): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                          <option value="<?php echo e($produto->id); ?>"><?php echo e($produto->nome); ?></option>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
                     </div>
                   <div class="col-6">
@@ -29,18 +28,18 @@
                  
 
                         <option selected>Selecione</option>
-                        <option id="1">Lenon</option>
-                        <option id="2">Gabriel</option>
-                        <option id="3">Jonathan</option>
+                        <?php $__currentLoopData = $clientes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cliente): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                          <option value="<?php echo e($cliente->id); ?>"><?php echo e($cliente->nome); ?></option>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
                   </div>
                   <div class="col-6">
                     <label for="motorista">Motorista</label>
                     <select id="motorista" name="motorista"class="form-control">
                         <option selected>Selecione</option>
-                        <option id="1">Lenon</option>
-                        <option id="2">Gabriel</option>
-                        <option id="3">Jonathan</option>
+                        <?php $__currentLoopData = $motoristas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $motorista): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                          <option value="<?php echo e($motorista->id); ?>"><?php echo e($motorista->nome); ?></option>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
                   </div>
 
@@ -48,7 +47,7 @@
 
                 </div>
             </div>
-            <div class="card-footer">
+            <div class="card-footer"> 
               <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
 
                 </div>

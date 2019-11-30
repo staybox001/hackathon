@@ -17,10 +17,9 @@
                     <select id="produto" name="produto" class="form-control">
 
                         <option selected>Selecionar</option>
-                        <option id="1">Caixa D'água 500l</option>
-                        <option id="2">Caixa D'água 1000l</option>
-                        <option id="3">Piscina 30000l</option>
-                        <option id="4">Piscina 50000l</option>
+                        @foreach ($produtos as $produto)
+                          <option value="{{$produto->id}}">{{$produto->nome}}</option>
+                        @endforeach
                     </select>
                     </div>
                   <div class="col-6">
@@ -30,18 +29,18 @@
                  
 
                         <option selected>Selecione</option>
-                        <option id="1">Lenon</option>
-                        <option id="2">Gabriel</option>
-                        <option id="3">Jonathan</option>
+                        @foreach ($clientes as $cliente)
+                          <option value="{{$cliente->id}}">{{$cliente->nome}}</option>
+                        @endforeach
                     </select>
                   </div>
                   <div class="col-6">
                     <label for="motorista">Motorista</label>
                     <select id="motorista" name="motorista"class="form-control">
                         <option selected>Selecione</option>
-                        <option id="1">Lenon</option>
-                        <option id="2">Gabriel</option>
-                        <option id="3">Jonathan</option>
+                        @foreach ($motoristas as $motorista)
+                          <option value="{{$motorista->id}}">{{$motorista->nome}}</option>
+                        @endforeach
                     </select>
                   </div>
 
@@ -49,7 +48,7 @@
 
                 </div>
             </div>
-            <div class="card-footer">
+            <div class="card-footer"> 
               <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
 
                 </div>

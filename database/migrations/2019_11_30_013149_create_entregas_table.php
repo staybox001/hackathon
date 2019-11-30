@@ -15,7 +15,7 @@ class CreateEntregasTable extends Migration
     {
         Schema::create('entregas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('status', 30);
+            $table->string('status', 30)->default(0);
             $table->bigInteger('id_produto')->unsigned()->index('fk_entrega_produto');
             $table->integer('quantidade');
             $table->bigInteger('id_cliente')->unsigned()->index('fk_entrega_cliente');

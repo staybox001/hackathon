@@ -19,19 +19,12 @@
                 </thead>
                 <tbody>
                 @foreach ($andamento as $andamentos)
-<<<<<<< HEAD
-                <td>{{$andamentos->id_produto}}</td>
-                <td>{{$andamentos->id_cliente}}</td>
-                <td>{{$andamentos->id_motorista}}</td>
-                <td>X</td>
-=======
                 <tr>
-                  <td>{{$andamentos->id_produto}}</td>
-                  <td>{{$andamentos->id_cliente}}</td>
-                  <td>{{$andamentos->id_motorista}}</td>
-                  <td>X</td>
+                  <td>{{$andamentos->produto}}</td>
+                  <td>{{$andamentos->cliente}}</td>
+                  <td>{{$andamentos->motorista}}</td>
+                <td><a class="btn btn-success" href="{{route('entrega.show', $andamentos->id)}}">Abrir</a></td>
                 </tr>
->>>>>>> gabriel4
                 @endforeach
               </table>
             </div>

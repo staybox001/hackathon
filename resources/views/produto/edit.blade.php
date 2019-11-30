@@ -8,6 +8,7 @@
             <!-- /.card-header -->
             <!-- form start -->
             <form role="form" method="POST" enctype="multipart/form-data" action={{route('produto.update', $produto->id)}}>
+                {!! method_field('PUT') !!}
                 @csrf
             <div class="card-body">
               <div class="row">
@@ -41,7 +42,7 @@
                         </div>
                         <div class="form-group">
                         <label for="peso">Peso</label>
-                        <input name="peso" type="number" step="any" class="form-control" id="peso" valor="{{$produto->peso}}" required>
+                        <input name="peso" type="number" step="any" class="form-control" id="peso" value="{{$produto->peso}}" required>
                         </div>
                   </div>
                   <div class="form-group">

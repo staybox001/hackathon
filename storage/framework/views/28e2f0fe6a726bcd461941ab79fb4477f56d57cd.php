@@ -7,6 +7,8 @@
             <!-- /.card-header -->
             <!-- form start -->
             <form role="form" method="POST" enctype="multipart/form-data" action=<?php echo e(route('produto.update', $produto->id)); ?>>
+                <?php echo method_field('PUT'); ?>
+
                 <?php echo csrf_field(); ?>
             <div class="card-body">
               <div class="row">
@@ -40,7 +42,7 @@
                         </div>
                         <div class="form-group">
                         <label for="peso">Peso</label>
-                        <input name="peso" type="number" step="any" class="form-control" id="peso" valor="<?php echo e($produto->peso); ?>" required>
+                        <input name="peso" type="number" step="any" class="form-control" id="peso" value="<?php echo e($produto->peso); ?>" required>
                         </div>
                   </div>
                   <div class="form-group">
