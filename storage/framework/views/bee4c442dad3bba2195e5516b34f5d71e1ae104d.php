@@ -19,9 +19,9 @@
                             <label for="data">Categoria</label>
                             <select id="categoria" name="categoria"class="form-control">
                                     <option selected>Selecione</option>
-                                    <option id="1">Lenon</option>
-                                    <option id="2">Gabriel</option>
-                                    <option id="3">Jonathan</option>
+                                    <?php $__currentLoopData = $categorias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $categoria): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <option value="<?php echo e($categoria->id); ?>"><?php echo e($categoria->nome); ?></option>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </select>
                         </div>
                   </div>
@@ -37,7 +37,7 @@
                   </div>
                   <div class="form-group">
                         <label for="image">Foto</label>
-                        <input type="file" id="image" name="img_motorista">
+                        <input type="file" id="image" name="img_produto">
                   </div>
               </div>
                         

@@ -20,9 +20,9 @@
                             <label for="data">Categoria</label>
                             <select id="categoria" name="categoria"class="form-control">
                                     <option selected>Selecione</option>
-                                    <option id="1">Lenon</option>
-                                    <option id="2">Gabriel</option>
-                                    <option id="3">Jonathan</option>
+                                    @foreach($categorias as $categoria)
+                                        <option value="{{$categoria->id}}">{{$categoria->nome}}</option>
+                                    @endforeach
                             </select>
                         </div>
                   </div>
@@ -38,7 +38,7 @@
                   </div>
                   <div class="form-group">
                         <label for="image">Foto</label>
-                        <input type="file" id="image" name="img_motorista">
+                        <input type="file" id="image" name="img_produto">
                   </div>
               </div>
                         

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Categoria;
 
 class CategoriaController extends Controller
 {
@@ -24,7 +25,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //
+        return view('categoria.cadastro');
     }
 
     /**
@@ -35,7 +36,7 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
     }
 
     /**
@@ -46,7 +47,8 @@ class CategoriaController extends Controller
      */
     public function show($id)
     {
-        //
+        $categoria = Categoria::find($id);
+        return view('categoria.categoriashow', compact('categoria'));
     }
 
     /**
@@ -57,7 +59,8 @@ class CategoriaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categoria = Categoria::find($id);
+        return view('categoria.edit', compact('categoria'));
     }
 
     /**
@@ -69,7 +72,9 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Categoria::where('id', $id)
+                            ->update(['nome' => $request->nome, 'descricao' => $request->descricao]);
+        return redirect()->route('categoria.show', $id);
     }
 
     /**

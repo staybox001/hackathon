@@ -4,7 +4,7 @@
 <div class="container">
         <div class="card card-primary">
              <div class="card-header">
-               <h3 class="card-title">Produtos</h3>
+               <h3 class="card-title">Categorias</h3>
              </div>
            <!-- /.card-header -->
            <div class="card-body">
@@ -12,18 +12,16 @@
                <thead>
                <tr>
                  <th>Nome</th>
-                 <th>Categoria</th>
-                 <th>Valor</th>
+                 <th>Descrição</th>
                  <th>Ação</th>
                </tr>
                </thead>
                <tbody>
-               @foreach ($produtos as $produto)
+               @foreach ($categorias as $categoria)
                 <tr>
-                    <td>{{$produto->nome}}</td>
-                    <td>{{$produto->valor}}</td>
-                    <td>{{$produto->peso}}</td>
-                    <td><a class="btn-sm btn-success" href="{{route('produto.show', $produto->id)}}">Abrir</a></td>
+                    <td>{{$categoria->nome}}</td>
+                    <td>{{$categoria->descricao}}</td>
+                    <td><a class="btn-sm btn-success" href="{{route('categoria.show', $categoria->id)}}">Abrir</a></td>
                 </tr>
                @endforeach
                 </tbody>

@@ -17,6 +17,7 @@ class CreateEntregasTable extends Migration
             $table->bigIncrements('id');
             $table->string('status', 30);
             $table->bigInteger('id_produto')->unsigned()->index('fk_entrega_produto');
+            $table->integer('quantidade');
             $table->bigInteger('id_cliente')->unsigned()->index('fk_entrega_cliente');
             $table->bigInteger('id_motorista')->unsigned()->nullable()->index('fk_entrega_motorista');
             $table->string('latitude', 30)->nullable();

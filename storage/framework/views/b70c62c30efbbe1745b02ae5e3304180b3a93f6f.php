@@ -7,16 +7,10 @@
             <!-- /.card-header -->
             <!-- form start -->
             <form role="form" method="post" action=<?php echo e(route('cliente.update', $cliente->id)); ?>>
-<<<<<<< HEAD
-                <?php echo method_field('PUT'); ?>}
-=======
-<<<<<<< HEAD
+
                 <?php echo method_field('PUT'); ?>
 
-=======
-                <?php echo method_field('PUT'); ?>}
->>>>>>> 5992403b9d11ffc084b2c02fc4c3938259ad67ce
->>>>>>> gabriel4
+
                 <?php echo csrf_field(); ?>
             <div class="card-body">
               <div class="row">

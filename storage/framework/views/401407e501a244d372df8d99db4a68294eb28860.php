@@ -13,7 +13,6 @@
                  <th>Nome</th>
                  <th>Categoria</th>
                  <th>Valor</th>
-                 <th>Peso</th>
                  <th>Ação</th>
                </tr>
                </thead>
@@ -21,9 +20,8 @@
                <?php $__currentLoopData = $produtos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $produto): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
                     <td><?php echo e($produto->nome); ?></td>
-                    <td><?php echo e($produto->cpf); ?></td>
-                    <td><?php echo e($produto->data_nascimento); ?></td>
-                    <td><?php echo e($produto->created_at); ?></td>
+                    <td><?php echo e($produto->valor); ?></td>
+                    <td><?php echo e($produto->peso); ?></td>
                     <td><a class="btn-sm btn-success" href="<?php echo e(route('produto.show', $produto->id)); ?>">Abrir</a></td>
                 </tr>
                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

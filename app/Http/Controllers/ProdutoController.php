@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Produtos;
+use App\Categoria;
 
 class ProdutoController extends Controller
 {
@@ -25,7 +26,8 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        return view('produto.cadastro'); 
+        $categorias = Categoria::all();
+        return view('produto.cadastro', compact('categorias')); 
     }
 
     /**
@@ -65,7 +67,9 @@ class ProdutoController extends Controller
      */
     public function show($id)
     {
-        //
+        $produto = Produtos::find($id);
+        $categoria = Categoria::find($produto->id_categoria);
+        return view('produto.produtoshow', compact('produto', 'categoria'));
     }
 
     /**
