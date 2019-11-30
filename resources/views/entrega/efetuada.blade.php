@@ -19,12 +19,19 @@
                 </thead>
                 <tbody>
                 @foreach ($efetuada as $efetuadas)
+<<<<<<< HEAD
                 <tr>
                   <td>{{$efetuadas->id_produto}}</td>
                   <td>{{$efetuadas->is_cliente}}</td>
                   <td>{{$efetuadas->id_motorista}}</td>
                   <td><a href="{{route('entrega.show', $entregas->id_entregas )}}" class="btn btn-default">Abrir</a></td>
                 </tr>
+=======
+                <td>{{$efetuadas->id_produto}}</td>
+                <td>{{$efetuadas->id_cliente}}</td>
+                <td>{{$efetuadas->id_motorista}}</td>
+                <td>X</td>
+>>>>>>> lenon
                 @endforeach
               </table>
             </div>

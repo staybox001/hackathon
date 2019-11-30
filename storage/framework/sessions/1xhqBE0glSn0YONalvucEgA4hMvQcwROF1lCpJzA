@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 a:3:{s:6:"_token";s:40:"el11G7VIGN6nebCVtrcAKuqMoFZeDwX2x8ZjbA2x";s:9:"_previous";a:1:{s:3:"url";s:33:"http://localhost:8001/divergencia";}s:6:"_flash";a:2:{s:3:"old";a:0:{}s:3:"new";a:0:{}}}
+=======
+a:3:{s:6:"_token";s:40:"xWYZF3GX39mqKS8TFovk9NRc3M5EM9L8PXuoPhg9";s:9:"_previous";a:1:{s:3:"url";s:21:"http://localhost:8001";}s:6:"_flash";a:2:{s:3:"old";a:0:{}s:3:"new";a:0:{}}}
+>>>>>>> lenon

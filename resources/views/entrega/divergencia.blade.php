@@ -19,12 +19,19 @@
                 </thead>
                 <tbody>
                 @foreach ($divergencia as $divergencias)
+<<<<<<< HEAD
                 <tr>
                   <td>{{$divergencias->id_produto}}</td>
                   <td>{{$divergencias->id_cliente}}</td>
                   <td>{{$divergencias->id_motorista}}</td>
                   <td>X</td>
                 </tr>
+=======
+                <td>{{$divergencias->id_produto}}</td>
+                <td>{{$divergencias->id_cliente}}</td>
+                <td>{{$divergencias->id_motorista}}</td>
+                <td>X</td>
+>>>>>>> lenon
                 @endforeach
               </table>
             </div>
