@@ -23,9 +23,9 @@ class CreateEntregasTable extends Migration
             $table->string('latitude', 30)->nullable();
             $table->string('longitude', 30)->nullable();
             $table->datetime('data_entrega')->nullable();
-            $table->string('foto_entrega', 30)->nullable();
-
-            $table->timestamps();
+            $table->string('foto_entrega', 100)->nullable();
+            $table->string('foto_nota', 100)->nullable();
+            $table->dateTime('created_at')->useCurrent();
         });
     }
 

@@ -26,13 +26,13 @@
               
                               <ul class="list-group list-group-unbordered mb-3">
                                 <li class="list-group-item">
-                                  <b>Entregas Efetuadas</b> <a class="float-right">1,322</a>
+                                  <b>Entregas Efetuadas</b> <a class="float-right"><?php echo e($efetuadas); ?></a>
                                 </li>
                                 <li class="list-group-item">
-                                  <b>Entregas Pendentes</b> <a class="float-right">543</a>
+                                  <b>Entregas Pendentes</b> <a class="float-right"><?php echo e($andamento); ?></a>
                                 </li>
                                 <li class="list-group-item">
-                                  <b>Divergencias</b> <a class="float-right">13,287</a>
+                                  <b>Divergencias</b> <a class="float-right"><?php echo e($divergencias); ?></a>
                                 </li>
                               </ul>
               
@@ -56,15 +56,26 @@
                 <div class="card-body">
                     <div class="row">
 
-                    
-
                         <div class="col-sm">
-                            <h6 class="card-title">Nome: <?php echo e($motorista->nome); ?></h6>
-                            <br /><br />
-                            <p class="card-text">CPF: <?php echo e($motorista->cpf); ?></p>
-                        
-                            <h6 class="card-title">Data de Nascimento: <?php echo e($motorista->data_nascimento); ?></h6>
-                            <br /><br />
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                  <th>Cód</th>
+                                  <th>Cliente</th>
+                                  <th>Aberto Dia</th>
+                                  <th>Ações</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php $__currentLoopData = $entregas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $entrega): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <tr>
+                                  <td><?php echo e($entrega->id); ?></td>
+                                  <td><?php echo e($entrega->nome); ?></td>
+                                  <td><?php echo e($entrega->created_at); ?></td>
+                                <td><a class="btn btn-success" href="<?php echo e(route('entrega.show', $entrega->id)); ?>">Abrir</a></td>
+                                </tr>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                              </table>
                         </div>
                     </div>
                 

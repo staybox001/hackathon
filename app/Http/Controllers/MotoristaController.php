@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Motorista;
 use App\Geolocation;
+use App\Entrega;
+
 use DB;
 
 class MotoristaController extends Controller
@@ -70,8 +72,23 @@ class MotoristaController extends Controller
         $coord = Geolocation::where('id_motorista', $id)
                                 ->orderBy('id', 'desc')
                                 ->first();
-        //dd($coord);
-        return view('motorista.motoristashow', compact('motorista', 'coord'));
+        $entregas = Entrega::where('id_motorista', $id)
+                            ->where('status', 0)
+                            ->join('clientes', 'entregas.id_motorista', '=', 'clientes.id')
+                            ->select('entregas.*', 'clientes.nome')
+                            ->get();
+        $efetuadas = Entrega::where('id_motorista', $id)
+                            ->where('status', 1)
+                            ->count();
+        $andamento = Entrega::where('id_motorista', $id)
+                            ->where('status', 0)
+                            ->count();
+        $divergencias = Entrega::where('id_motorista', $id)
+                            ->where('status', 2)
+                            ->count();
+         
+                            //dd($coord);
+        return view('motorista.motoristashow', compact('motorista', 'coord', 'entregas', 'efetuadas', 'andamento', 'divergencias'));
     }
 
     /**

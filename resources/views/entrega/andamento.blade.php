@@ -14,6 +14,7 @@
                   <th>Produto</th>
                   <th>Cliente</th>
                   <th>Motorista</th>
+                  <th>Aberto Dia</th>
                   <th>Detalhes</th>
                 </tr>
                 </thead>
@@ -23,6 +24,7 @@
                   <td>{{$andamentos->produto}}</td>
                   <td>{{$andamentos->cliente}}</td>
                   <td>{{$andamentos->motorista}}</td>
+                  <td>{{$andamentos->abertura}}</td>
                 <td><a class="btn btn-success" href="{{route('entrega.show', $andamentos->id)}}">Abrir</a></td>
                 </tr>
                 @endforeach
