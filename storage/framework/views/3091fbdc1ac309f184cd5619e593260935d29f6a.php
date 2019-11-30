@@ -792,7 +792,8 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
+<script src="<?php echo e(url('plugins/datatables/jquery.dataTables.min.js')); ?>"></script>
+<script src="<?php echo e(url('plugins/datatables/dataTables.bootstrap.min.js')); ?>"></script>
 <!-- jQuery -->
 <script src="<?php echo e(url('plugins/jquery/jquery.min.js')); ?>"></script>
 <!-- jQuery UI 1.11.4 -->

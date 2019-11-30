@@ -49,8 +49,7 @@
         });
         });
         </script>
-     <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-     <script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
+
     
 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
