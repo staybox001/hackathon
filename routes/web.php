@@ -13,24 +13,24 @@
 
 Route::get('/', function () {
     return view('painel.index');
-})->name('inicio');
+})->name('inicio')->middleware('auth');
 
-Route::resource('/cliente', 'ClienteController');
+Route::resource('/cliente', 'ClienteController')->middleware('auth');
 
-Route::resource('/motorista', 'MotoristaController');
+Route::resource('/motorista', 'MotoristaController')->middleware('auth');
 
-Route::resource('/entrega', 'EntregaController');
+Route::resource('/entrega', 'EntregaController')->middleware('auth');
 
-    Route::get('/andamento', 'EntregaController@andamento')->name('entregaandamento');
+    Route::get('/andamento', 'EntregaController@andamento')->name('entregaandamento')->middleware('auth');
 
-    Route::get('/efetuada', 'EntregaController@efetuada')->name('entregaefetuada');
+    Route::get('/efetuada', 'EntregaController@efetuada')->name('entregaefetuada')->middleware('auth');
 
-    Route::get('/divergencia', 'EntregaController@divergencia')->name('entregadivergencia');
+    Route::get('/divergencia', 'EntregaController@divergencia')->name('entregadivergencia')->middleware('auth');
 
-Route::resource('/categoria', 'CategoriaController');
+Route::resource('/categoria', 'CategoriaController')->middleware('auth');
 
-Route::resource('/produto', 'ProdutoController');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout')->middleware('auth');
+
+Route::resource('/produto', 'ProdutoController')->middleware('auth');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

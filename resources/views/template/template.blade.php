@@ -36,15 +36,21 @@
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
+      <div class="row">
+          <div class="col-sm-10">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+        </li>
+          </div>
+          <div class="col-sm-1">
+          <a href="{{route('logout')}}" class='nav-link'>Logout</a>
+          </div>
+      {{-- <li class="nav-item d-none d-sm-inline-block">
         <a href="index3.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contato</a>
-      </li>
+      </li> --}}
     </ul>
 
     <!-- SEARCH FORM -->
@@ -216,7 +222,7 @@
               <p>
                 Entregas
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">4</span>
+                {{-- <span class="badge badge-info right">4</span> --}}
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -254,7 +260,7 @@
               <p>
                 Produtos
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">3</span>
+                {{-- <span class="badge badge-info right">3</span> --}}
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -283,7 +289,7 @@
                 <p>
                   Categorias
                   <i class="fas fa-angle-left right"></i>
-                  <span class="badge badge-info right">3</span>
+                  {{-- <span class="badge badge-info right">3</span> --}}
                 </p>
               </a>
               <ul class="nav nav-treeview">
@@ -310,7 +316,7 @@
               <p>
                 Clientes
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+                {{-- <span class="badge badge-info right">2</span> --}}
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -334,7 +340,7 @@
               <p>
                 Motoristas
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+                {{-- <span class="badge badge-info right">2</span> --}}
               </p>
             </a>
             <ul class="nav nav-treeview">
