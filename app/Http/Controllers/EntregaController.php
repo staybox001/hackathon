@@ -13,7 +13,8 @@ class EntregaController extends Controller
      */
     public function index()
     {
-        //
+        $entregas = Entrega::all();
+        return view('entrega.index', compact('entrega'));
     }
 
     /**
@@ -23,7 +24,22 @@ class EntregaController extends Controller
      */
     public function create()
     {
-        //
+        return view('entrega.cadastro', compact('entrega'));
+    }
+
+    public function andamento()
+    {
+        return view('entrega.andamento');
+    }
+
+    public function efetuadas()
+    {
+        return view('entrega.efetuada');
+    }
+
+    public function problema()
+    {
+        return view('entrega.problema');
     }
 
     /**
