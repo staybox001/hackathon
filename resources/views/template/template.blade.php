@@ -773,6 +773,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
+<<<<<<< HEAD
             <h1 class="m-0 text-dark">Dash</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
@@ -780,7 +781,10 @@
               <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active">Dash</li>
             </ol>
+=======
+>>>>>>> 2badc056326bcd5ce7fdda8797dee9bd16167f65
           </div><!-- /.col -->
+
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
