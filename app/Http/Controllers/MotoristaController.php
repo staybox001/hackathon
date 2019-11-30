@@ -27,7 +27,7 @@ class MotoristaController extends Controller
      */
     public function create()
     {
-        //
+        return view('motorista.cadastro');
     }
 
     /**
@@ -38,7 +38,24 @@ class MotoristaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // UPLOAD IMAGEM MOTORISTA
+        // VERIFICA SE É VALIDO
+        //CRIA O NOME DO ARQUIVO
+        if ($request->hasFile('img_motorista') && $request->file('img_motorista')->isValid()) {
+            $nome = $request->nome . time();
+            $extensao = $request->img_motorista->extension();
+            $nomeFile = "{$nome}.{$extensao}";
+            $upload = $request->img_motorista->storeAs('img-motoristas', $nomeFile);
+            $dadosFormulario['img_motorista'] = $upload;
+            if (!$upload) {
+                return redirect()
+                    ->back()
+                    ->with('error', 'Falha ao enviar imagem');
+            }
+        }
+      
+           Motorista::insert(['nome' => $request->nome, 'cpf' => $request->cpf, 'data_nascimento' => $request->data, 'senha' => $request->senha, 'foto' => $upload]);
+           return redirect()->route('motorista.index');
     }
 
     /**
@@ -65,7 +82,8 @@ class MotoristaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $motorista = Motorista::find($id);
+        return view('motorista.editar', compact('motorista'));
     }
 
     /**
@@ -77,7 +95,29 @@ class MotoristaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $olddata = Motorista::find($id);
+        $senha = $olddata->senha;
+        $foto = $olddata->foto;
+        if ($request->hasFile('img_motorista') && $request->file('img_motorista')->isValid()) {
+            $nome = $request->nome . time();
+            $extensao = $request->img_motorista->extension();
+            $nomeFile = "{$nome}.{$extensao}";
+            $upload = $request->img_motorista->storeAs('img-motoristas', $nomeFile);
+            $dadosFormulario['img_motorista'] = $upload;
+            if (!$upload) {
+                return redirect()
+                    ->back()
+                    ->with('error', 'Falha ao enviar imagem');
+            }
+            $foto = $upload;
+        }
+        if (!empty($request->senha)){
+            $senha = $request->senha;
+        }
+        Motorista::where('id', $id)
+                            ->update(['nome' => $request->nome, 'cpf' => $request->cpf, 'senha' => $senha, 'foto' => $foto]);
+        return redirect()->route('motorista.show', $id);
+
     }
 
     /**
