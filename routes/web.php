@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('painel.index');
-})->name('inicio')->middleware('auth');
+Route::get('/', 'HomeController@index')->name('inicio')->middleware('auth');
+
+Route::get('/home', function(){
+    return redirect('/');
+});
 
 Route::resource('/cliente', 'ClienteController')->middleware('auth');
 

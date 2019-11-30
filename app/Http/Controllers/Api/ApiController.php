@@ -31,7 +31,7 @@ class ApiController extends Controller
             ->where('id_motorista', '=', "$id_motorista")
             ->join('clientes', 'entregas.id_cliente', '=', 'clientes.id')
             ->join('produtos', 'entregas.id_produto', '=', 'produtos.id')
-            ->select('entregas.*', 'clientes.nome', 'clientes.endereco', 'clientes.cidade', 'clientes.estado', 'produtos.nome AS prodNome')
+            ->select('entregas.*', 'produtos.imagem', 'clientes.nome', 'clientes.endereco', 'clientes.cidade', 'clientes.estado', 'produtos.nome AS prodNome')
             ->get();
         return json_encode($entregas);
     }

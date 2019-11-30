@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use DB;
+
+
 class HomeController extends Controller
 {
     /**
@@ -23,6 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $clientes = DB::table('clientes')->count();
+        $totentregas = DB::table('entregas')->count();
+        $andamento = DB::table('entregas')->where('status', 0)->count();
+        $totdiverg = DB::table('entregas')->where('status', 2)->count();
+
+        return view('painel.index', compact('clientes', 'andamento', 'totentregas', 'totdiverg'));
     }
 }

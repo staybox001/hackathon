@@ -42,8 +42,11 @@
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
                   </div>
-
-                  <div name="status" hidden value="0"></div>
+                  <div class="col-6">
+                    <label for="quantidade">Quantidade</label>
+                    <input id="quantidade" type="number" name="quantdade"class="form-control" placeholder="Quantidade"/>
+                  </div>
+                  <!-- <div name="status" hidden value="0"></div> -->
 
                 </div>
             </div>
