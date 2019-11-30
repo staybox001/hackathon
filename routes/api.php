@@ -19,6 +19,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/entregas/{id_motorista}', 'Api\ApiController@listaEntregas');
 Route::post('/login', 'Api\ApiController@login');
+<<<<<<< HEAD
 Route::post('/geolocation', 'Api\ApiController@postGeolocation');
 Route::post('/finalizaEntrega', 'Api\ApiController@finalizaEntrega');
 Route::post('/advergencia', 'Api\ApiController@entregaComAdvergencia');
+=======
+Route::post('/geolocation', 'Api\ApiController@login');
+>>>>>>> gabriel4

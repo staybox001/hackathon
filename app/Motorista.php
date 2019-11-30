@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Motorista extends Model
 {
     //
-    public function geolocations()
+    public function geolocation()
     {
-        return $this->hasMany('App\Geolocations');
+        return $this->hasMany('App\Geolocation');
     }
     public function entrega()
     {
